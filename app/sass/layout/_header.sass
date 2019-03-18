@@ -1,0 +1,134 @@
+.main-head
+  background-color: $accent-green
+  height: 1000px
+  padding-top: 35px
+
+.top-line-wrap
+  position: relative
+
+.top-line
+  background-color: #fff
+  position: absolute
+  width: calc(100% + 100px)
+  top: 0
+  left: -50px
+  display: flex
+
+.logo-sector
+  padding: 15px 50px 25px
+  background-color: $accent-creamy
+  max-width: 378px
+  .logo
+    display: inline-block
+    margin-bottom: 20px
+
+.site-desc
+  font-weight: 700
+  line-height: 1.1
+
+.info-sector
+  padding: 15px 65px 25px 85px
+  max-width: calc(100% - 378px)
+  width: 100%
+
+.header-info
+  display: flex
+  justify-content: space-between
+  font-size: 14px
+  width: 100%
+  padding: 10px 0 15px
+  border-bottom: 1px solid #000
+  &-email
+    font-size: 16px
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+  &-call
+    font-weight: 700
+    text-align: right
+    .phone
+      margin-bottom: 5px
+      +mt(.2s)
+      font-size: 22px
+      display: block
+      color: #000
+      &:hover
+        color: $accent-green
+    .recall
+      text-transform: uppercase
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+.main-mnu
+  ul
+    display: flex
+    justify-content: space-between
+    line-height: 1
+    padding-top: 22px
+    text-transform: uppercase
+    li
+      a
+        color: #000
+        +mt(.2s)
+        display: inline-block
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          top: 5px
+          right: -29px
+          width: 5px
+          height: 5px
+          background-color: $accent-green
+          border-radius: 50%
+        &:hover
+          color: $accent-green
+      &:last-child
+        a:after
+          display: none
+
+#mmenu-btn
+  display: none
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: $accent-green
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before
+  background-color: $accent-green
+
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: #333
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.51)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: #fff
+//mmenu customization end
