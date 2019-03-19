@@ -80,6 +80,7 @@
         }, 'xml');
     });
 
+    $('.adv-gal').photoswipe();
 
     function heightses() {
 
@@ -87,6 +88,8 @@
         if ($(window).width()>=480) {
             $('.header-item-title').height('auto').equalHeights();
             $('.header-item-desc').height('auto').equalHeights();
+            $('.first-adv-row').height('auto').equalHeights();
+            $('.second-adv-row').height('auto').equalHeights();
         }
     }
 
@@ -95,6 +98,14 @@
     });
 
     heightses();
+
+        $(window).on('load', function (){
+            $(window).resize(function() {
+                heightses();
+            });
+
+            heightses();
+        });
 
 
 

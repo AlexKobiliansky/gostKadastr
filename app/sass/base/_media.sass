@@ -6,6 +6,15 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-advantages
+    padding: 80px 0 120px
+
+  .num-item
+    width: 100%
+    border-bottom: 1px solid #fff
+    &:nth-child(odd)
+      border-right: none
+
   .s-other
     .parallax
       right: 0
@@ -58,6 +67,15 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .advantages-bg
+    right: 30px
+  .num-item
+    width: 50%
+    &:nth-child(odd)
+      border-right: 1px solid #fff
+
+    border-bottom: none
 
   .s-services
     padding-top: 60px
@@ -128,6 +146,13 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .num-item
+    padding: 20px 15px
+    &-num
+      font-size: 46px
+    &-desc
+      font-size: 16px
+
   .s-other
     text-align: center
     .parallax
@@ -165,6 +190,29 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-advantages
+    .section-title
+      text-align: center
+
+  .advantages-bg
+    right: 0
+    width: 100%
+
+  .num-wrap
+    margin-right: 15px
+    margin-left: 15px
+
+  .num-item
+    width: 100%
+    border-bottom: 1px solid #fff
+    &:nth-child(odd)
+      border-right: none
+    &-desc
+      font-size: 20px
+    &-num
+      font-size: 55px
+
 
   .s-other
     padding: 60px 0
