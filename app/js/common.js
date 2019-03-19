@@ -1,4 +1,8 @@
-$(document).ready(function() {
+    $(document).ready(function() {
+
+
+
+
 
     /**
      * mobile-mnu customization
@@ -91,6 +95,7 @@ $(document).ready(function() {
     });
 
     heightses();
+
 
 
     /**
@@ -269,4 +274,37 @@ $(document).ready(function() {
     /**
      * end PARALLAX
      */
+
+
+
+
+
+    var totalCost = 0;
+
+    $('.check-item').each(function(){
+        var th = $(this),
+            check = th.find('input[type="checkbox"]'),
+            cost = check.data("value");
+
+            check.click(function(){
+                th.toggleClass('checked');
+                if($(this).prop('checked')) {
+                    totalCost = totalCost + cost;
+                } else {
+                    totalCost = totalCost - cost;
+                }
+                $('#total-cost .cost span').html(totalCost);
+                $('#costval').val(totalCost);
+            });
+
+
+
+
+        })
+
+
+
+
 });
+
+

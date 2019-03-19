@@ -1,0 +1,90 @@
+.s-calc
+  +bg-cover
+
+.calc-form
+  background-color: #fff
+  padding: 55px 35px 60px
+  text-align: center
+  h2
+    text-transform: uppercase
+    font-weight: 900
+    font-size: 30px
+    margin-bottom: 12px
+  h3
+    color: $accent-green
+    font-size: 18px
+    font-weight: normal
+    margin-bottom: 25px
+  .form-labels-wrap
+    background-color: $accent-creamy
+    padding: 28px 24px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    label:first-child
+      width: 100%
+    label
+      width: calc(50% - 5px)
+    .btn
+      width: 100%
+      margin-top: 10px
+    input
+      padding: 14px
+      font-size: 18px
+      margin-bottom: 11px
+      background-color: transparent
+      &:focus
+        background-color: #fff
+
+.check-items-wrap
+  padding-bottom: 12px
+  text-align: left
+
+.check-item
+  position: relative
+  cursor: pointer
+  margin-bottom: 12px
+  &:before
+    content: ''
+    position: absolute
+    width: 17px
+    height: 17px
+    border: 1px solid #a3a3a3
+    background-color: #fff
+    left: 0
+    top: 0
+  &:after
+    content: ''
+    position: absolute
+    width: 9px
+    height: 9px
+    left: 4px
+    top: 4px
+    background-color: $accent-green
+    opacity: 0
+  &.checked
+    &:after
+      opacity: 1
+  input
+    position: absolute
+    z-index: -1
+    opacity: 0
+    margin: 10px 0 0 20px
+  .checkbox-text
+    //padding-left: 28px
+    position: relative
+    left: 28px
+
+#total-cost
+  border-top: 1px solid #000
+  border-bottom: 1px solid #000
+  margin-bottom: 27px
+  padding: 8px 22px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .cost
+    font-size: 36px
+    font-weight: 900
+    color: $accent-green
+

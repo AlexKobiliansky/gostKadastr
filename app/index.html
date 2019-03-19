@@ -22,7 +22,7 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="/css/main.min.css">
 
 </head>
 
@@ -473,6 +473,112 @@
 		</div>
 	</section>
 	<!-- ======= END SECTION SERVICES ======= -->
+
+	<!-- ======= SECTION CALC ======= -->
+	<section class="s-calc" style="background-image: url('img/bg-calc.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="  offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+					<form class="contact-form calc-form">
+
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="ГостКадастр">
+						<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+						<input type="hidden" name="form_subject" value="Заявка с сайта ГостКадастр">
+						<!-- END Hidden Required Fields -->
+
+						<input type="hidden" name="Форма" value="Рассчет стоимости">
+
+
+
+						<h2>Калькулятор стоимости</h2>
+						<h3>Укажите необходимые работы</h3>
+						<div class="check-items-wrap">
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Геодезическая съемка" data-value="3000">
+								<span class="checkbox-text">Геодезическая съемка</span>
+							</label>
+							<!-- check-item -->
+
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Формирование межевого плана" data-value="3000">
+								<span class="checkbox-text">Формирование межевого плана</span>
+							</label>
+							<!-- check-item -->
+
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Подписание границ с соедями" data-value="3000">
+								<span class="checkbox-text">Подписание границ с соедями</span>
+							</label>
+							<!-- check-item -->
+
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Подписание границ с председателем" data-value="3000">
+								<span class="checkbox-text">Подписание границ с председателем</span>
+							</label>
+							<!-- check-item -->
+
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Регистрация в Росреестре" data-value="3000">
+								<span class="checkbox-text">Регистрация в Росреестре</span>
+							</label>
+							<!-- check-item -->
+
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Доставка документов на дом" data-value="3000">
+								<span class="checkbox-text">Доставка документов на дом</span>
+							</label>
+							<!-- check-item -->
+
+							<!-- check-item -->
+							<label class="check-item">
+								<input type="checkbox" name="Технический план на дом" data-value="3000">
+								<span class="checkbox-text">Технический план на дом</span>
+							</label>
+							<!-- check-item -->
+						</div>
+
+						  <div id="total-cost">
+							  <div>Стоимость услуг:</div>
+							  <div class="cost"><span class="cost-value">0</span> руб</div>
+						  </div>
+
+						<input type="hidden" name="Общая стоимость" id="costval">
+
+						<div class="form-labels-wrap">
+							<label>
+								<input type="text" placeholder="Введите кадастровый номер" name="Кадастровый номер участка" autocomplete="off" data-validation="required">
+							</label>
+
+							<label>
+								<input type="text" placeholder="Ваше имя" name="Имя" autocomplete="off" data-validation="custom"
+									   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+									   data-validation-error-msg="* Укажите ваше имя">
+							</label>
+
+							<label>
+								<input type="text" class="user-phone" name="Телефон" placeholder="Номер телефона"
+									   autocomplete="off" data-validation="custom"
+									   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+									   data-validation-error-msg="* Укажите ваш телефон">
+							</label>
+							<button type="submit" class="btn btn-green">Получить информацию</button>
+						</div>
+
+
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ======= END SECTION CALC ======= -->
 
 
 
