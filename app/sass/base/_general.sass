@@ -65,12 +65,51 @@ ul
   +mt(.2s)
   text-align: center
   line-height: 1
-  padding: 15px 28px
+  padding: 17px 28px
   white-space: nowrap
+  font-size: 18px
+  cursor: pointer
   
 .btn-light
   background-color: #fff
   color: $text
+
+.btn-green
+  color: #fff
+  background-color: $accent-green
+  border-color: $accent-green
+  &:hover
+    color: $accent-green
+    background-color: #fff
+
+
+.section-title
+  h2
+    font-size: 30px
+    font-weight: 700
+    text-transform: uppercase
+
+form
+  label
+    margin-bottom: 0
+  input
+    width: 100%
+    font-size: 18px
+    background-color: #fff
+    border: 1px solid #a3a3a2
+    line-height: 1
+    padding: 15px 23px
+    &::placeholder
+      color: #989898
+    &:focus
+      border-color: $accent-green
+    &.error
+      border-color: rgb(185, 74, 72)
+      color: rgb(185, 74, 72)
+      &::placeholder
+        color: rgb(185, 74, 72)
+.help-block
+  display: none
 
 
 
