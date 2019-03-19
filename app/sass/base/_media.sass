@@ -52,6 +52,14 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-services
+    padding-top: 60px
+
+  .service-item
+    &-img
+      margin-top: 30px
+      height: 400px
+
   .s-questions
     text-align: center
     padding: 60px 0
@@ -113,6 +121,17 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .service-item
+    &-img
+      margin-top: 30px
+      height: 300px
+
+  .s-questions
+    .section-title
+      h2
+        font-size: 26px
+
+
   .stage-item
     width: 50%
 
@@ -134,6 +153,21 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-services
+    .section-title
+      text-align: center
+
+  .service-item
+    padding: 20px 15px
+    &-title
+      font-size: 20px
+    .btn
+      width: 100%
+      span
+        display: none
+    &-img
+      height: 230px
 
   .s-questions
     padding-top: 60px
