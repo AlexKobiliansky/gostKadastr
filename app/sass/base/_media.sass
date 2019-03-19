@@ -6,6 +6,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .stage-item
+    &-title
+      font-size: 20px
+    &-desc
+      font-size: 14px
+
   .consult-form
     label
       margin-bottom: 20px
@@ -34,6 +40,14 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .stages-wrap
+    flex-wrap: wrap
+    justify-content: space-around
+
+  .stage-item
+    width: 33%
+    margin-bottom: 40px
 
   .getinfo-form
     padding-left: 30px
@@ -73,6 +87,9 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .stage-item
+    width: 50%
+
   .getinfo-form
     padding-top: 40px
     padding-bottom: 40px
@@ -91,6 +108,11 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .stage-item
+    width: 100%
+    &:last-child
+      margin-bottom: 0
 
   .getinfo-form
     padding-left: 15px
