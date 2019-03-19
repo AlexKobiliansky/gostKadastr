@@ -1,7 +1,11 @@
 .main-head
-  background-color: $accent-green
-  height: 1000px
+  height: 1370px
   padding-top: 35px
+  +bg-cover
+  .container
+    position: relative
+    height: 100%
+
 
 .top-line-wrap
   position: relative
@@ -9,10 +13,12 @@
 .top-line
   background-color: #fff
   position: absolute
+  z-index: 2
   width: calc(100% + 100px)
   top: 0
   left: -50px
   display: flex
+  box-shadow: 0 0 20px 5px rgba(#000, .1)
 
 .logo-sector
   padding: 15px 50px 25px
@@ -132,3 +138,59 @@
 .mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
   color: #fff
 //mmenu customization end
+
+
+.header-content
+  margin-top: 250px
+  color: #fff
+  h1
+    font-weight: 900
+    font-size: 55px
+    line-height: 1
+    margin-bottom: 35px
+    text-transform: uppercase
+  h2
+    font-size: 35px
+    margin-bottom: 50px
+    font-weight: normal
+  .btn
+    position: relative
+    padding-right: 44px
+    &:after
+      content: '>>'
+      font-weight: 900
+      color: $accent-green
+      position: absolute
+      right: 23px
+
+.header-items-wrap
+  position: absolute
+  bottom: 60px
+  left: 0
+  width: 100%
+
+.header-item
+  background-color: #fff
+  padding: 18px 20px
+  box-shadow: 0 0 20px 5px rgba(#000, .1)
+  cursor: pointer
+  fill: $accent-green
+  line-height: 1
+  +mt(.3s)
+  &-icon
+    margin-bottom: 20px
+    .svg
+      height: 55px
+      width: auto
+  &-title
+    font-weight: 900
+    font-size: 28px
+    margin-bottom: 12px
+  &-desc
+    font-size: 20px
+  &:hover
+    fill: #fff
+    color: #fff
+    background-color: $accent-green
+
+

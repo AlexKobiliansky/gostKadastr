@@ -5,6 +5,14 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .header-content
+    margin-top: 350px
+    h1
+      font-size: 46px
+    h2
+      font-size: 30px
+
   .top-line
     flex-direction: column
     width: 100%
@@ -20,8 +28,12 @@
 
 
 
+
 // ≥992px
 +media-breakpoint-down(md)
+
+  .header-item
+    margin-bottom: 30px
 
   #mmenu-btn
     display: block
@@ -45,12 +57,35 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .header-content
+    h1
+      font-size: 30px
+      margin-bottom: 15px
+    h2
+      font-size: 24px
+      margin-bottom: 25px
+
   .info-sector
     padding-left: 25px
     padding-right: 25px
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .main-head
+    height: auto
+    background-position: left bottom
+  .top-line
+    position: relative
+  .header-items-wrap
+    position: relative
+    bottom: 0
+  .header-content
+    margin-top: 40px
+    margin-bottom: 30px
+    .btn
+      font-size: 14px
 
   #mmenu-btn
     top: 10px
