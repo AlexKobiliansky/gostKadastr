@@ -6,6 +6,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .faq, .about
+    &:before
+      width: calc((100vw - 940px)/2)
+
   .s-advantages
     padding: 80px 0 120px
 
@@ -67,6 +71,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-faq
+    background-image: none!important
+
+  .faq, .about
+    &:before
+      display: none
+    .section-title
+      text-align: center
+
+  .about
+    padding: 40px 30px
 
   .advantages-bg
     right: 30px
@@ -190,6 +206,22 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .faq
+    padding: 80px 0
+    font-size: 16px
+    &-item
+      font-size: 16px
+
+  .faq-item-ans
+    padding: 20px 30px 10px
+
+  .about
+    font-size: 16px
+    padding-left: 15px
+    padding-right: 15px
+    .section-title
+      margin-bottom: 15px
 
   .clients-slider
     .owl-nav

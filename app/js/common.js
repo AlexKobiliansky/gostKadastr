@@ -133,6 +133,29 @@
         });
 
 
+        /**
+         * FAQ custom
+         */
+        $('.faq-item:first-child').find('.faq-item-quest').addClass('opened').siblings('.faq-item-ans').css('display', 'block');
+
+        $('.faq-item-quest').on("click", function(){
+            var th = $(this);
+            var parent = th.parents('.faq-item');
+
+
+            th.toggleClass('opened');
+            th.siblings('.faq-item-ans').slideToggle();
+
+            parent.siblings('.faq-item').each(function(){
+                $(this).find('.faq-item-quest').removeClass('opened');
+                $(this).find('.faq-item-ans').slideUp();
+            });
+        });
+        /**
+         * end FAQ custom
+         */
+
+
     /**
      * FORMS
      */

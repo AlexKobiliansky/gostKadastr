@@ -1,0 +1,67 @@
+.s-faq
+  +bg-cover
+
+.faq
+  background-color: #fff
+  padding: 145px 40px 75px 0
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    background-color: #fff
+    height: 100%
+    width: calc((100vw - 1140px)/2)
+    right: 100%
+    top: 0
+
+.faq-wrap
+  margin-top: 35px
+
+.faq-item
+  font-size: 20px
+  font-weight: bold
+  position: relative
+  z-index: 2
+  margin-bottom: 10px
+  &-quest
+    padding: 12px 55px 12px 30px
+    background-color: #fff
+    box-shadow: 0 5px 20px 4px rgba(#000, .12)
+    cursor: pointer
+    position: relative
+    +mt(.3s)
+    &:hover
+      color: $accent-green
+    &:after
+      content: ''
+      position: absolute
+      border: 6px solid transparent
+      border-top: 6px solid #000
+      right: 20px
+      top: calc(50% - 4.5px)
+    &.opened
+      &:after
+        border: 6px solid transparent
+        border-bottom: 6px solid #000
+        top: calc(50% - 7.5px)
+  &-ans
+    padding: 30px
+    font-weight: normal
+    display: none
+
+
+.about
+  background-color: $accent-creamy
+  font-size: 20px
+  padding: 85px 40px 110px 0
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    background-color: $accent-creamy
+    height: 100%
+    width: calc((100vw - 1140px)/2)
+    right: 100%
+    top: 0
+  .section-title
+    margin-bottom: 50px
