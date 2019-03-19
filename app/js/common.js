@@ -90,7 +90,10 @@
             $('.header-item-desc').height('auto').equalHeights();
             $('.first-adv-row').height('auto').equalHeights();
             $('.second-adv-row').height('auto').equalHeights();
+
         }
+
+        $('.client-logo').height('auto').equalHeights();
     }
 
     $(window).resize(function() {
@@ -107,6 +110,27 @@
             heightses();
         });
 
+
+        $('.clients-slider').owlCarousel({
+            loop:true,
+            margin: 50,
+            items: 5,
+            nav: true,
+            dots: true,
+            dotsEach: 1,
+            navText: ['',''],
+            responsive : {
+                0 : {
+                    items: 2,
+                },
+                480 : {
+                    items: 3,
+                },
+                992: {
+                    items: 5,
+                }
+            }
+        });
 
 
     /**

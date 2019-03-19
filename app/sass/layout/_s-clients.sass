@@ -1,0 +1,54 @@
+.s-clients
+  padding: 50px 0 70px
+  text-align: center
+
+.clients-slider
+  margin-top: 75px
+  .owl-nav
+    width: 100%
+    position: relative
+    button.owl-prev, button.owl-next
+      width: 58px
+      height: 58px
+      background-color: #333
+      position: absolute
+      +mt(.3s)
+      &:hover
+        background-color: $accent-green
+    button.owl-prev
+      left: 0
+      &:after
+        content: ''
+        position: absolute
+        border: 10px solid transparent
+        border-right: 10px solid #fff
+        +mt(.3s)
+        left: 12px
+        top: 18px
+    button.owl-next
+      right: 0
+      &:after
+        content: ''
+        position: absolute
+        border: 10px solid transparent
+        border-left: 10px solid #fff
+        +mt(.3s)
+        right: 12px
+        top: 18px
+  .owl-dots
+    text-align: center
+    button.owl-dot
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background-color: #9c9c9c
+      display: inline-block
+      margin: 0 6px
+      &.active
+        background-color: $accent-green
+
+.client-logo
+  margin-bottom: 40px
+  display: flex
+  align-items: center
+  justify-content: center
