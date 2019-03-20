@@ -27,6 +27,21 @@
 </head>
 
 <body>
+<!-- preloader -->
+<div class="preloader">
+	<div id="cube-loader">
+		<div class="caption">
+			<div class="cube-loader">
+				<div class="cube loader-1"></div>
+				<div class="cube loader-2"></div>
+				<div class="cube loader-4"></div>
+				<div class="cube loader-3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /preloader -->
+
 <div id="page-container">
 	<nav id="mobile-mnu" data-logo="img/logo-foot.png">
 		<ul>
@@ -65,7 +80,7 @@
 							<div class="header-info-email item"><a href="mailto:info@air-geo.ru">info@air-geo.ru</a></div>
 							<div class="header-info-call item">
 								<a href="tel:+78172506655" class="phone">+7 (8172) 50-66-55</a>
-								<a href="#0" class="recall">Заказать звонок</a>
+								<a href="#popup-form" class="recall">Заказать звонок</a>
 							</div>
 						</div>
 						<!-- main-mnu -->
@@ -1142,7 +1157,39 @@
 </div>
 <!-- ======= END HTML FOR PHOTOSWIPE ======= -->
 
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
 
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="ГостКадастр">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта ГостКадастр">
+		<!-- END Hidden Required Fields -->
+
+		<h2>Оставьте заявку</h2>
+		<h3>И мы свяжемся с Вами в ближайшее время</h3>
+
+		<input type="hidden" name="Форма" value="Консультация">
+
+		<div class="form-labels-wrap">
+
+			<label>
+				<input type="text" placeholder="Ваше имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+					   data-validation-error-msg="* Укажите ваше имя">
+			</label>
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Введите Ваш номер телефона"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+					   data-validation-error-msg="* Укажите ваш телефон">
+			</label>
+			<button type="submit" class="btn btn-green">Заказать звонок</button>
+		</div>
+	</form>
+</div>
+
+<div id="toTop1"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
 
 <script src="js/scripts.min.js"></script>
 

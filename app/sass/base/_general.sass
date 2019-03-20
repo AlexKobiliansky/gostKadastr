@@ -69,12 +69,18 @@ ul
   white-space: nowrap
   font-size: 18px
   cursor: pointer
+  &.disabled
+    filter: grayscale(.7)
   
 .btn-light
   background-color: #fff
   color: $text
   &:hover
     color: $accent-green
+  &.disabled
+    &:hover, &:active, &:focus
+      background-color: #fff
+      color: $text
 
 .btn-green
   color: #fff
@@ -83,6 +89,10 @@ ul
   &:hover
     color: $accent-green
     background-color: #fff
+  &.disabled
+    &:hover, &:active, &:focus
+      background-color: $accent-green
+      color: #fff
 
 
 .section-title
@@ -113,6 +123,167 @@ form
         color: rgb(185, 74, 72)
 .help-block
   display: none
+
+
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 999
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $accent-creamy
+
+
+#cube-loader
+  align-items: center
+  display: flex
+  height: 100%
+  width: 100%
+  position: fixed
+  & .caption
+    margin: 0 auto
+
+  .cube-loader
+    width: 73px
+    height: 73px
+    margin: 0 auto
+    margin-top: 49px
+    position: relative
+    transform: rotateZ(45deg)
+
+    & .cube
+      position: relative
+      transform: rotateZ(45deg)
+      width: 50%
+      height: 50%
+      float: left
+      transform: scale(1.1)
+
+    & .cube:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: $accent-green
+      animation: cube-loader 2.76s infinite linear both
+      transform-origin: 100% 100%
+
+    & .loader-2
+      transform: scale(1.1) rotateZ(90deg)
+
+    & .loader-3
+      transform: scale(1.1) rotateZ(180deg)
+
+    & .loader-4
+      transform: scale(1.1) rotateZ(270deg)
+
+    & .loader-2:before
+      animation-delay: 0.35s
+
+    & .loader-3:before
+      animation-delay: 0.69s
+
+    & .loader-4:before
+      animation-delay: 1.04s
+
+@keyframes cube-loader
+  0%, 10%
+    transform: perspective(136px) rotateX(-180deg)
+    opacity: 0
+
+  25%, 75%
+    transform: perspective(136px) rotateX(0deg)
+    opacity: 1
+
+  90%, 100%
+    transform: perspective(136px) rotateY(180deg)
+    opacity: 0
+
+//end preloader
+
+
+.popup-form
+  max-width: 600px
+  padding: 30px 45px 60px 45px
+  margin-left: auto
+  margin-right: auto
+  background-color: $accent-creamy
+  text-align: center
+  border-radius: 3px
+  box-shadow: 0 0 20px 5px rgba(#000, .3)
+  h2
+    text-transform: uppercase
+    margin-bottom: 12px
+    font-size: 30px
+    font-weight: 900
+  h3
+    color: $accent-green
+    margin-bottom: 35px
+  label
+    margin-bottom: 20px
+  .btn
+    width: 100%
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .7
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.mfp-close
+  width: 50px
+  height: 50px
+  line-height: 50px
+//end MY-MFP-ZOOM-IN
+
+.hidden
+  display: none!important
+
+
+#toTop1
+  width: 40px
+  height: 40px
+  background-color: $accent-green
+  color: #eee
+  text-align: center
+  font-size: 28px
+  line-height: 40px
+  position: fixed
+  right: 20px
+  bottom: 40px
+  cursor: pointer
+  +mt(.3s)
+  border-radius: 3px
+  opacity: 0
+  z-index: 100
+  &:hover
+    opacity: 1!important
+
+
 
 
 

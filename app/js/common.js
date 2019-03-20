@@ -4,7 +4,8 @@
 
 
 
-    /**
+
+        /**
      * mobile-mnu customization
      */
     var mmenu = $('#mobile-mnu');
@@ -176,19 +177,90 @@
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });
     /**
      * FORMS end
      */
+
+
+
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+
+
+        var totalCost = 0;
+
+        $('.check-item').each(function(){
+            var th = $(this),
+                check = th.find('input[type="checkbox"]'),
+                cost = check.data("value");
+
+            check.click(function(){
+                th.toggleClass('checked');
+                if($(this).prop('checked')) {
+                    totalCost = totalCost + cost;
+                } else {
+                    totalCost = totalCost - cost;
+                }
+                $('#total-cost .cost span').html(totalCost);
+                $('#costval').val(totalCost);
+            });
+        });
+
+
+        /**
+         * toTop functionality start
+         */
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 1000) {
+                $('#toTop1').css('opacity', '.6');
+            } else {
+                $('#toTop1').css('opacity', '0');
+            }
+        });
+
+        $('body').bind('touchmove', function (e)
+        {
+            if($(this).scrollTop() > 1000) {
+                $('#toTop1').css('opacity', '.6');
+            } else {
+                $('#toTop1').css('opacity', '0');
+            }
+        });
+
+        $('#toTop1').click(function() {
+            $('body,html').animate({scrollTop:0},600);
+        });
+        /**
+         * toTop functionality end
+         */
 
 
     /**
@@ -336,31 +408,7 @@
 
 
 
-
-    var totalCost = 0;
-
-    $('.check-item').each(function(){
-        var th = $(this),
-            check = th.find('input[type="checkbox"]'),
-            cost = check.data("value");
-
-            check.click(function(){
-                th.toggleClass('checked');
-                if($(this).prop('checked')) {
-                    totalCost = totalCost + cost;
-                } else {
-                    totalCost = totalCost - cost;
-                }
-                $('#total-cost .cost span').html(totalCost);
-                $('#costval').val(totalCost);
-            });
-
-
-
-
-        })
-
-
+        $('.preloader').fadeOut(0);
 
 
 });
