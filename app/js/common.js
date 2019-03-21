@@ -157,46 +157,10 @@
          */
 
 
-    /**
-     * FORMS
-     */
-    var uPhone = $('.user-phone');
-    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
 
-    uPhone.on('click', function (ele) {
-        var needelem = ele.target || event.srcElement;
-        needelem.setSelectionRange(4,4);
-        needelem.focus();
-    });
 
-    $.validate({
-        form : '.contact-form',
-        scrollToTopOnError: false
-    });
 
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
-        var th = $(this);
-        var t = th.find(".btn").text();
-        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
-
-        $.ajax({
-            type: "POST",
-            url: "mail.php", //Change
-            data: th.serialize()
-        }).done(function() {
-            setTimeout(function() {
-                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
-                th.trigger("reset");
-                $.magnificPopup.close();
-            }, 2000);
-        });
-        return false;
-    });
-    /**
-     * FORMS end
-     */
-
+   $('.main-mnu a').mPageScroll2id();
 
 
     $(function() {
@@ -406,7 +370,45 @@
      */
 
 
+        /**
+         * FORMS
+         */
+        var uPhone = $('.user-phone');
+        uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
 
+        uPhone.on('click', function (ele) {
+            var needelem = ele.target || event.srcElement;
+            needelem.setSelectionRange(4,4);
+            needelem.focus();
+        });
+
+        $.validate({
+            form : '.contact-form',
+            scrollToTopOnError: false
+        });
+
+        //E-mail Ajax Send
+        $("form").submit(function() { //Change
+            var th = $(this);
+            var t = th.find(".btn").text();
+            th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
+
+            $.ajax({
+                type: "POST",
+                url: "mail.php", //Change
+                data: th.serialize()
+            }).done(function() {
+                setTimeout(function() {
+                    th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                    th.trigger("reset");
+                    $.magnificPopup.close();
+                }, 2000);
+            });
+            return false;
+        });
+        /**
+         * FORMS end
+         */
 
         $('.preloader').fadeOut(0);
 
