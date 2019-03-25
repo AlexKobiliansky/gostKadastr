@@ -408,7 +408,7 @@
         });
 
 
-        
+
         $(".getinfo-form").submit(function() {
 
             var num = $(this).find('#kad-num').val();
