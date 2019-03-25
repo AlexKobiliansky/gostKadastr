@@ -1,7 +1,11 @@
 .s-services
-  padding: 125px 0 115px
+  padding: 75px 0 115px
   counter-reset: service-item
   background-color: #f0f0f0
+  position: relative
+  overflow: hidden
+  .container
+    position: relative
 
 .services-wrap
   margin-top: 50px
@@ -12,6 +16,7 @@
   margin-bottom: 60px
   box-shadow: 0 0 50px 8px rgba(#000, .15)
   overflow: hidden
+  background-color: #fff
   &:before
     counter-increment: service-item
     content: '0'counter(service-item)
@@ -67,3 +72,27 @@
   &-img
     height: 100%
     +bg-cover
+
+.ser-par
+  position: absolute
+
+
+.ser-par-1
+  top: 527px
+  left: -114px
+
+.ser-par-2
+  top: 1820px
+  left: -275px
+
+.ser-par-3
+  bottom: 420px
+  left: -120px
+
+.ser-par-4
+  top: 400px
+  right: -180px
+
+.ser-par-5
+  bottom: 255px
+  right: -450px

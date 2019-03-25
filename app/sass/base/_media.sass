@@ -3,8 +3,22 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (max-width: 1600px)
+  .head-eclipse
+    left: auto
+    right: 26%
+
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .p2
+    max-width: 420px
+    bottom: 475px
+    right: 5%
+
+  .head-eclipse
+    right: 24%
 
   .faq, .about
     &:before
@@ -71,6 +85,16 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .p2
+    display: none
+
+  .p1
+    left: auto
+    right: 3%
+
+  .head-eclipse
+    right: 14%
 
   .requisites
     margin-top: 20px
@@ -168,6 +192,15 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .ser-par
+    display: none
+
+  .cloud-1, .cloud-2, .cloud-3, .cloud-4
+    animation: none
+
+  .head-eclipse
+    right: 4%
+
   .num-item
     padding: 20px 15px
     &-num
@@ -212,6 +245,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .main-head
+    overflow: hidden
+
+  .head-eclipse
+    right: auto
+    left: 50%
 
   .popup-form
     padding-left: 15px

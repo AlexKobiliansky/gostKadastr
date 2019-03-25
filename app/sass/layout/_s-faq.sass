@@ -1,10 +1,15 @@
 .s-faq
+  position: relative
+  overflow: hidden
   +bg-cover
+  .cloud-1, .cloud-2, .cloud-3 .cloud-4
+    z-index: 2
 
 .faq
   background-color: #fff
   padding: 145px 40px 75px 0
   position: relative
+  z-index: 3
   &:before
     content: ''
     position: absolute
@@ -55,6 +60,7 @@
   font-size: 20px
   padding: 85px 40px 110px 0
   position: relative
+  z-index: 3
   &:before
     content: ''
     position: absolute

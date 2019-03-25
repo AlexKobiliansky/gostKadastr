@@ -383,19 +383,19 @@
         });
 
         $.validate({
-            form : '.contact-form',
+            form : '.contact-form, .getinfo-form',
             scrollToTopOnError: false
         });
 
         //E-mail Ajax Send
-        $("form").submit(function() { //Change
+        $(".contact-form").submit(function() { //Change
             var th = $(this);
             var t = th.find(".btn").text();
             th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
             $.ajax({
                 type: "POST",
-                url: "mail.php", //Change
+                url: "/mail.php", //Change
                 data: th.serialize()
             }).done(function() {
                 setTimeout(function() {
@@ -406,13 +406,120 @@
             });
             return false;
         });
+
+
+        
+        $(".getinfo-form").submit(function() {
+
+            var num = $(this).find('#kad-num').val();
+            window.open(
+                'https://pkk5.rosreestr.ru/#text='+num+'&type=1&app=search&opened=1',
+                '_blank' // <- This is what makes it open in a new window.
+            );
+            return false;
+        });
+
+
+
+
+
+
+
         /**
          * FORMS end
          */
 
         $('.preloader').fadeOut(0);
 
+        if ($(window).width()>=992) {
+            $('.main-head').hover(
+                function(){
+                    $(this).parallaxify({
+                        alphaFilter: 0.1,
+                        motionType: 'performance',
+                    });
+                }
+            );
+        }
 
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
 
 

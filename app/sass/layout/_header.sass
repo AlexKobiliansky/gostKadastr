@@ -1,10 +1,79 @@
 .main-head
   height: 1370px
   padding-top: 35px
+  position: relative
+  overflow: hidden
   +bg-cover
   .container
     position: relative
     height: 100%
+
+.cloud-1, .cloud-2, .cloud-3, .cloud-4
+  position: absolute
+
+.cloud-1
+  left: -660px
+  bottom: 100px
+  animation: move-1 linear infinite 100s
+  z-index: 7
+
+.cloud-2
+  top: 22px
+  left: -280px
+  animation: move-1 linear infinite 100s
+  z-index: 7
+
+.cloud-3
+  top: 125px
+  right: -560px
+  animation: move-2 linear infinite 100s
+
+.cloud-4
+  top: 545px
+  right: -290px
+  animation: move-2 linear infinite 100s
+
+@keyframes move-1
+  0%
+    transform: translate(0, 0)
+  100%
+    transform: translate(2000px, 0)
+
+@keyframes move-2
+  0%
+    transform: translate(0, 0)
+  100%
+    transform: translate(-2000px, 0)
+
+
+.head-eclipse
+  position: absolute
+  z-index: 9
+  top: -50px
+  left: 3%
+
+#par-container
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.p1, .p2
+  position: absolute
+  z-index: 6
+
+.p1
+  max-width: 322px
+  bottom: 310px
+  left: 7%
+
+.p2
+  max-width: 525px
+  right: 105px
+  bottom: 215px
+  z-index: 8
 
 
 .top-line-wrap
@@ -13,12 +82,12 @@
 .top-line
   background-color: #fff
   position: absolute
-  z-index: 2
   width: calc(100% + 100px)
   top: 0
   left: -50px
   display: flex
   box-shadow: 0 0 20px 5px rgba(#000, .1)
+  z-index: 10
 
 .logo-sector
   padding: 15px 50px 25px
@@ -44,6 +113,7 @@
   width: 100%
   padding: 10px 0 15px
   border-bottom: 1px solid #000
+  z-index: 10
   &-email
     font-size: 16px
     a
@@ -143,6 +213,8 @@
 .header-content
   margin-top: 250px
   color: #fff
+  position: relative
+  z-index: 10
   h1
     font-weight: 900
     font-size: 55px
@@ -169,6 +241,7 @@
   bottom: 60px
   left: 0
   width: 100%
+  z-index: 8
 
 .header-item
   background-color: #fff
